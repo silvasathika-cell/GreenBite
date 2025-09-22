@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Mindfulness • GreenBite</title>
+
+  <!-- Global CSS -->
+  <link rel="stylesheet" href="style.css" />
+  <!-- Page-specific CSS -->
+  <link rel="stylesheet" href="mindfulness.css" />
+
+  <!-- Global JS -->
+  <script src="script.js" defer></script>
+  <!-- Page JS -->
+  <script src="mindfulness.js" defer></script>
+</head>
+<body>
+
+  <!-- ===== NAVBAR (works on all pages) ===== -->
+  <header>
+    <nav class="navbar">
+      <a class="logo" href="index.html">GreenBite</a>
+
+      <!-- Hamburger (hidden on desktop via CSS) -->
+      <button id="menuBtn"
+              aria-label="Menu"
+              aria-expanded="false"
+              aria-controls="mainNav">☰</button>
+
+      <ul id="mainNav" class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="recipes.html">Healthy Recipes</a></li>
+        <li><a href="calculator.html">Calorie Calculator</a></li>
+        <li><a href="workouts.html">Workouts</a></li>
+        <li><a href="mindfulness.html" class="active">Mindfulness</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- ===== PAGE BANNER ===== -->
+  <section class="page-banner">
+    <h1>Mindfulness</h1>
+    <p>Breathe in, breathe out, and relax.</p>
+  </section>
+
+  <!-- ===== MAIN CONTENT ===== -->
+  <main class="wrap">
+
+    <!-- Guided Breathing -->
+    <section class="card">
+      <h2>Guided Breathing</h2>
+      <div class="center">
+        <div id="breathCircle" class="breath-circle"></div>
+      </div>
+      <p id="breathPhase" class="phase">Ready?</p>
+      <div class="btn-row">
+        <button id="breathStart" class="btn">Start</button>
+        <button id="breathStop" class="btn outline">Stop</button>
+      </div>
+      <p class="hint">Pattern: Inhale 4s • Hold 4s • Exhale 4s</p>
+    </section>
+
+    <!-- Session Timer -->
+    <section class="card">
+      <h2>Session Timer</h2>
+      <div class="two">
+        <label>Minutes
+          <input id="mins" type="number" min="0" value="5" />
+        </label>
+        <label>Seconds
+          <input id="secs" type="number" min="0" value="0" />
+        </label>
+      </div>
+      <div id="timerDisplay" class="timer">05:00</div>
+      <div class="btn-row">
+        <button id="timerStart" class="btn">Start</button>
+        <button id="timerPause" class="btn outline" disabled>Pause</button>
+        <button id="timerReset" class="btn outline">Reset</button>
+      </div>
+    </section>
+
+    <!-- Sessions Completed -->
+    <section class="card">
+      <h2>Sessions Completed</h2>
+      <div class="center">
+        <div id="sessionCount" class="count">0</div>
+      </div>
+      <div class="btn-row">
+        <button id="clearCount" class="btn outline">Clear Count</button>
+      </div>
+      <p class="small dim">Adds +1 each time the timer finishes.</p>
+    </section>
+  </main>
+
+  <!-- ===== FOOTER ===== -->
+  <div class="bottom-strip"></div>
+  <footer class="site-footer">
+    <p>&copy; <span id="yearNow"></span> GreenBite • Eat healthy, stay mindful.</p>
+  </footer>
+
+  <script>
+    // Auto update footer year
+    document.addEventListener('DOMContentLoaded', () => {
+      document.getElementById('yearNow').textContent = new Date().getFullYear();
+    });
+  </script>
+</body>
+</html>

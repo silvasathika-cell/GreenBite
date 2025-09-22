@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Healthy Recipes • GreenBite</title>
+
+  <!-- Page styles -->
+  <link rel="stylesheet" href="recipe.css" />
+
+  <!-- Page JS -->
+  <script defer src="recipe.js"></script>
+</head>
+<body>
+
+  <!-- =================== NAVBAR (same markup as other pages) =================== -->
+  <header>
+    <nav class="navbar">
+      <a class="logo" href="index.html">GreenBite</a>
+
+      <!-- Hamburger (hidden on desktop via CSS) -->
+      <button id="menuBtn" class="menu-btn" aria-label="Menu" aria-expanded="false" aria-controls="mainNav">
+        ☰
+      </button>
+
+      <ul id="mainNav" class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a class="active" href="recipe.html">Healthy Recipes</a></li>
+        <li><a href="calculator.html">Calorie Calculator</a></li>
+        <li><a href="workout.html">Workouts</a></li>
+        <li><a href="mindfulness.html">Mindfulness</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- =================== PAGE BANNER =================== -->
+  <section class="page-banner">
+    <div class="banner-content">
+      <h1>Healthy Recipes</h1>
+      <p>Search by name or filter by category. Click a card to see the full recipe.</p>
+    </div>
+  </section>
+
+  <!-- =================== FILTERS =================== -->
+  <section class="controls">
+    <input id="recipeSearch" class="search" type="search"
+           placeholder="Search recipes (e.g., oats, pasta)">
+
+    <div class="chips">
+      <button class="chip active" data-filter="all">All</button>
+      <button class="chip" data-filter="breakfast">Breakfast</button>
+      <button class="chip" data-filter="lunch">Lunch</button>
+      <button class="chip" data-filter="dinner">Dinner</button>
+      <button class="chip" data-filter="dessert">Dessert</button>
+      <button class="chip" data-filter="soup">Soup</button>
+    </div>
+  </section>
+
+  <!-- =================== GRID =================== -->
+  <main class="grid" id="recipeGrid">
+    <!-- Cards are injected by recipe.js -->
+  </main>
+
+  <!-- =================== MODAL =================== -->
+  <div id="recipeModal" class="modal" aria-hidden="true" role="dialog" aria-labelledby="modalTitle">
+    <div class="modal__dialog">
+      <button class="modal__close" id="modalClose" aria-label="Close">×</button>
+
+      <h2 id="modalTitle">Recipe Title</h2>
+      <p id="modalDesc" class="modal__desc"></p>
+
+      <div class="modal__cols">
+        <section>
+          <h3>Ingredients</h3>
+          <ul id="modalIngredients"></ul>
+        </section>
+
+        <section>
+          <h3>Steps</h3>
+          <ol id="modalSteps"></ol>
+        </section>
+      </div>
+
+      <section class="modal__table">
+        <h3>Nutrition</h3>
+        <table>
+          <thead>
+            <tr><th>Calories</th><th>Protein</th><th>Carbs</th><th>Fat</th></tr>
+          </thead>
+          <tbody id="modalNutrition"></tbody>
+        </table>
+      </section>
+    </div>
+  </div>
+
+  <!-- =================== FOOTER (single line) =================== -->
+  <footer class="footer-line"></footer>
+
+</body>
+</html>

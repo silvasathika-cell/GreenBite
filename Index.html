@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>WellNest</title>
+
+  <!-- Link CSS -->
+  <link rel="stylesheet" href="style.css">
+
+  <!-- Link JS -->
+  <script src="script.js" defer></script>
+</head>
+<body>
+
+  <!-- ===================== NAVBAR ===================== -->
+  <header>
+    <nav class="navbar">
+      <!-- Logo -->
+      <a href="Index.html" class="logo">GreenBite</a>
+
+      <!-- Hamburger Menu Button -->
+      <button id="menuBtn" class="menu-btn" aria-label="Menu" aria-expanded="false" aria-controls="mainNav">
+        ☰
+      </button>
+
+      <!-- Navigation Links -->
+      <ul id="mainNav" class="nav-links">
+        <li><a class="active" href="index.html">Home</a></li>
+        <li><a href="recipe.html">Recipes</a></li>
+        <li><a href="calculator.html">calculator</a></li>
+        <li><a href="workouts.html">Workouts</a></li>
+        <li><a href="mindfulness.html">Mindfulness</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- ===================== HERO SECTION ===================== -->
+  <section class="hero">
+    <div class="hero-box">
+      <h1 id="heroQuote">Nourish your body, calm your mind.</h1>
+    </div>
+  </section>
+
+  <!-- ===================== TIP OF THE DAY ===================== -->
+  <section class="daily-tip">
+    <div class="tip-inner">
+      <h2>Tip of the Day</h2>
+      <p id="tipText">Drink a glass of water after you wake up.</p>
+    </div>
+  </section>
+
+  <!-- ===================== FEATURE BOXES ===================== -->
+  <section class="features">
+    <article class="card">
+      <img src="images/8.jpg" alt="Healthy recipes">
+      <h3>Healthy Recipes</h3>
+      <p>Quick, balanced meals you can cook with simple steps.</p>
+      <a class="btn" href="recipes.html">Go to Recipes</a>
+    </article>
+
+    <article class="card">
+      <img src="images/23.jpg" alt="Home workouts">
+      <h3>Home Workouts</h3>
+      <p>Beginner routines for daily movement. No gym needed.</p>
+      <a class="btn" href="workouts.html">Go to Workouts</a>
+    </article>
+
+    <article class="card">
+      <img src="images/25.jpg" alt="Mindfulness">
+      <h3>Mindfulness</h3>
+      <p>Short breathing and focus exercises to reduce stress.</p>
+      <a class="btn" href="mindfulness.html">Go to Mindfulness</a>
+    </article>
+  </section>
+
+  <!-- ===================== FOOTER (Home Page Only) ===================== -->
+  <footer class="home-footer">
+    <div class="home-footer-inner">
+
+      <!-- About Column -->
+      <div class="home-col">
+        <h3>WellNest</h3>
+        <p>
+          Healthy recipes, workouts, and tools to help you build better habits —
+          one small step at a time.
+        </p>
+      </div>
+
+      <!-- Quick Links Column -->
+      <div class="home-col">
+        <h4>Quick Links</h4>
+        <ul class="footer-links">
+          <li><a href="recipes.html">Recipes</a></li>
+          <li><a href="workouts.html">Workouts</a></li>
+          <li><a href="mindfulness.html">Mindfulness</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+
+      <!-- Newsletter Column -->
+      <div class="home-col">
+        <h4>Newsletter</h4>
+        <p>Get one weekly email with tips & updates.</p>
+
+        <form id="newsletterForm" class="newsletter" novalidate>
+          <label class="sr-only" for="newsletterEmail">Email</label>
+          <input id="newsletterEmail" type="email" placeholder="you@example.com" required>
+          <button class="newsletter-btn" type="submit">Subscribe</button>
+        </form>
+
+        <p id="newsletterMsg" class="newsletter-msg" aria-live="polite"></p>
+      </div>
+    </div>
+
+    <!-- Footer Bottom Line -->
+    <div class="footer-bottom">
+      <p>© <span id="yearNow"></span> WellNest • Be well, step by step.</p>
+    </div>
+  </footer>
+
+</body>
+</html>

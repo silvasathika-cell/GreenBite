@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact • GreenBite</title>
+
+  <!-- Page CSS -->
+  <link rel="stylesheet" href="contact.css" />
+  <!-- Small global JS that also handles the mobile menu -->
+  <script src="contact.js" defer></script>
+</head>
+<body>
+
+  <!-- ===== Nav Bar ===== -->
+  <header>
+    <nav class="navbar">
+      <a class="logo" href="index.html">GreenBite</a>
+
+      <!-- Hamburger: hidden on desktop, shown on mobile via CSS -->
+      <button id="menuBtn" aria-label="Menu" aria-expanded="false" aria-controls="mainNav">☰</button>
+
+      <ul id="mainNav" class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="recipe.html">Healthy Recipes</a></li>
+        <li><a href="calculator.html">Calorie Calculator</a></li>
+        <li><a href="workouts.html">Workouts</a></li>
+        <li><a href="mindfulness.html">Mindfulness</a></li>
+        <li><a class="active" href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- ===== Page Banner ===== -->
+  <section class="page-banner">
+    <h1>Contact & Feedback</h1>
+    <p>We’d love to hear from you.</p>
+  </section>
+
+  <!-- ===== Main Content ===== -->
+  <main class="contact-wrap">
+
+    <!-- 2-column grid: info + form -->
+    <section class="contact-grid">
+      <!-- Left: info -->
+      <article class="card">
+        <h2>Reach us</h2>
+        <p>Questions, ideas, or feedback? Send a message and we’ll get back soon.</p>
+        <p><strong>Email:</strong> sathikasilva2004@gmail.com</p>
+        <p><strong>Hours:</strong> Mon–Fri, 9:00–17:00</p>
+        <p><strong>Address:</strong> 3, Peter Mendis Road, Negombo</p>
+      </article>
+
+      <!-- Right: validated form -->
+      <article class="card">
+        <h2>Send a message</h2>
+
+        <!-- novalidate lets us show custom JS messages -->
+        <form id="contactForm" novalidate>
+          <label for="name">Name</label>
+          <input id="name" name="name" type="text" placeholder="Your name" required />
+
+          <label for="email">Email</label>
+          <input id="email" name="email" type="email" placeholder="you@example.com" required />
+
+          <label for="message">Message</label>
+          <textarea id="message" name="message" rows="6" placeholder="Write your message..." required></textarea>
+
+          <button class="btn" type="submit">Send</button>
+        </form>
+
+        <!-- Confirmation / error text goes here -->
+        <p id="contactMsg" class="msg" aria-live="polite"></p>
+      </article>
+    </section>
+
+    <!-- ===== FAQ (Accordion) ===== -->
+    <section class="faq card">
+      <h2>FAQ</h2>
+
+      <button class="faq-q" type="button" aria-expanded="false">How soon do you reply?</button>
+      <div class="faq-a" hidden>
+        <p>Usually within 1–2 business days.</p>
+      </div>
+
+      <button class="faq-q" type="button" aria-expanded="false">Can I suggest a recipe?</button>
+      <div class="faq-a" hidden>
+        <p>Yes! Send it using the form above — we love ideas.</p>
+      </div>
+
+      <button class="faq-q" type="button" aria-expanded="false">Where are you located?</button>
+      <div class="faq-a" hidden>
+        <p>GreenBite HQ, 123 Garden Rd.</p>
+      </div>
+    </section>
+
+    <!-- ===== Map ===== -->
+    <section class="map card">
+      <h2>Find us</h2>
+      <iframe
+        title="GreenBite HQ Map"
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"
+        src="https://www.google.com/maps?q=New%20Town%20Hall&output=embed">
+      </iframe>
+    </section>
+  </main>
+
+  <!-- ===== Footer (one line) ===== -->
+  <footer class="footer-line">
+    <p>© <span id="yearNow"></span> GreenBite • Eat well, live well.</p>
+  </footer>
+
+</body>
+</html>

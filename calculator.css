@@ -1,0 +1,162 @@
+/* -------- Banner (beige) -------- */
+.page-banner {
+  background: #efe5cf;          /* beige */
+  padding: 28px 16px;
+  text-align: center;
+  border-bottom: 1px solid #e2d7bf;
+}
+.page-banner .banner-content h1 {
+  color: #134e2a;               /* dark green */
+  margin: 0 0 6px;
+}
+.page-banner .banner-content p {
+  color: #255b3a;
+}
+
+/* -------- Layout wrapper -------- */
+.calc-wrap {
+  max-width: 900px;
+  margin: 22px auto 60px;
+  padding: 0 16px;
+}
+
+/* -------- Card (light brown) -------- */
+.calc-card {
+  background: #f6e9d6;          /* light brown */
+  border: 1px solid #e7d6bd;
+  border-radius: 14px;
+  padding: 20px;
+  box-shadow: 0 10px 24px rgba(0,0,0,.06);
+}
+.calc-card h2 {
+  color: #134e2a;
+  margin: 0 0 12px;
+}
+
+/* -------- Form grid -------- */
+.grid {
+  display: grid;
+  gap: 14px;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+.grid .full { grid-column: 1 / -1; }
+
+label { display: block; color: #134e2a; font-weight: 600; }
+
+input, select {
+  width: 100%;
+  margin-top: 6px;
+  padding: 12px 12px;
+  border-radius: 10px;
+  border: 2px solid #e0cfb1;
+  background: #fff;
+  outline: none;
+}
+input:focus, select:focus {
+  border-color: #b18655;
+  box-shadow: 0 0 0 3px rgba(177,134,85,.2);
+}
+
+/* -------- Radio group -------- */
+.gender-field { border: none; padding: 0; }
+.gender-field legend { font-weight: 700; color: #134e2a; margin-bottom: 6px; }
+.radio { display: inline-flex; align-items: center; gap: 8px; margin-right: 16px; }
+
+/* -------- Buttons (brown) -------- */
+.buttons { display: flex; gap: 10px; margin-top: 14px; }
+.btn {
+  background: #8b5e34;          /* brown */
+  color: #fff;
+  border: none;
+  padding: 12px 18px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: 700;
+  box-shadow: 0 8px 18px rgba(139,94,52,.25);
+}
+.btn:hover { background: #7a512d; }
+.btn.outline {
+  background: #fff;
+  color: #8b5e34;
+  border: 2px solid #8b5e34;
+  box-shadow: none;
+}
+
+/* -------- Results -------- */
+.result {
+  margin-top: 16px;
+  background: #fff;
+  border-radius: 12px;
+  border: 1px solid #e7efe9;
+  padding: 14px;
+}
+.result h3 { margin: 0 0 8px; color: #134e2a; }
+.result .row {
+  display: flex;
+  justify-content: space-between;
+  padding: 8px 0;
+  border-top: 1px dashed #e0e6e2;
+}
+.result .row:first-of-type { border-top: none; }
+.mt { margin-top: 8px; }
+
+.macro-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 8px;
+}
+.macro-table th, .macro-table td {
+  border: 1px solid #e6e6e6;
+  padding: 8px 10px;
+  text-align: left;
+}
+.macro-table th { background: #f7f7f7; }
+
+/* -------- Footer one-line -------- */
+.site-footer.one-line {
+  border-top: 1px solid #d0d0d0;
+  text-align: center;
+  padding: 12px 10px;
+  font-size: .95rem;
+}
+
+/* -------- Mobile tweaks -------- */
+@media (max-width: 800px) {
+  .grid { grid-template-columns: 1fr; }
+}
+
+/* IMPORTANT: Menu button visible only on mobile.
+   Keep this if your main style.css doesn't already handle it. */
+@media (min-width: 801px) {
+  #menuBtn { display: none; }
+}
+@media (max-width: 800px) {
+  #menuBtn {
+    display: inline-block;
+    font-size: 1.6rem;
+    background: none;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+  }
+  .nav-links {
+    display: none;               /* hidden until opened */
+    flex-direction: column;
+    gap: 12px;
+    position: absolute;
+    right: 20px;
+    top: 64px;
+    background: #134e2a;
+    padding: 14px;
+    border-radius: 10px;
+    min-width: 220px;
+  }
+  .nav-links.open { display: flex; }
+}
+footer {
+  background-color: #8B4513;  /* Brown color */
+  color: #fff;               /* White text */
+  text-align: center;
+  padding: 10px 0;
+  margin-top: 20px;
+}

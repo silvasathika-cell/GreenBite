@@ -1,0 +1,154 @@
+/* ===== Reset ===== */
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: Arial, sans-serif; background: #fff; color: #222; }
+
+/* ===== Navbar ===== */
+.navbar {
+  background: #134e2a; /* dark green */
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 40px;
+  position: relative;
+}
+
+.logo {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 1.3rem;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.nav-links a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+  padding: 6px;
+}
+
+.nav-links a:hover { color: #ffeb3b; }
+.nav-links a.active { color: #1aa37a; }
+
+/* Hide hamburger on desktop */
+#menuBtn { display: none; }
+
+/* ===== Mobile nav ===== */
+@media (max-width: 800px) {
+  #menuBtn {
+    display: inline-block;
+    font-size: 1.6rem;
+    background: none;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+  }
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    right: 20px;
+    top: 64px;
+    background: #134e2a;
+    padding: 12px;
+    border-radius: 10px;
+  }
+
+  .nav-links.open { display: flex; }
+}
+
+/* ===== Page Banner ===== */
+.page-banner {
+  background: linear-gradient(135deg, #1aa037, #134e2a);
+  color: #fdf6e3;
+  text-align: center;
+  padding: 42px 16px;
+  border-radius: 0 0 12px 12px;
+  margin-bottom: 24px;
+}
+.page-banner h1 { margin-bottom: 8px; }
+
+/* ===== Layout ===== */
+.wrap {
+  max-width: 900px;
+  margin: 0 auto 36px;
+  padding: 0 16px;
+  display: grid;
+  gap: 20px;
+}
+
+/* ===== Cards ===== */
+.card {
+  background: #f4fff7;
+  border: 1px solid #d8f0e2;
+  border-radius: 12px;
+  padding: 16px;
+  box-shadow: 0 8px 18px rgba(0,0,0,.06);
+}
+.card h2 { margin-top: 0; color: #134e2a; }
+.small { font-size: .95rem; }
+.dim { color: #5d6f67; }
+
+/* ===== Breathing circle ===== */
+.center { display: flex; justify-content: center; }
+.breath-circle {
+  width: 150px; height: 150px;
+  border-radius: 50%;
+  background: #e3f7ec;
+  border: 4px solid #9fd9b8;
+  transform: scale(1);
+  transition: transform 4s ease-in-out;
+}
+.phase { text-align: center; font-weight: 700; margin: 8px 0 10px; }
+.hint { text-align: center; color: #3b7552; }
+
+/* ===== Timer ===== */
+.two { display: flex; gap: 10px; margin-bottom: 10px; }
+.two label { flex: 1; font-weight: 600; color: #134e2a; }
+.two input {
+  width: 100%; padding: 8px;
+  border: 2px solid #cfe8da;
+  border-radius: 8px;
+}
+.timer {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 800;
+  border: 2px dashed #cfe8da;
+  border-radius: 10px;
+  padding: 10px;
+  margin-bottom: 12px;
+}
+
+/* ===== Buttons ===== */
+.btn-row { display: flex; gap: 10px; flex-wrap: wrap; justify-content: center; }
+.btn {
+  background: #134e2a;
+  color: #fff;
+  border: none;
+  padding: 10px 16px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+.btn:hover { opacity: .9; }
+.btn:disabled { opacity: .55; cursor: not-allowed; }
+.btn.outline { background: #fff; color: #134e2a; border: 2px solid #134e2a; }
+
+/* ===== Sessions ===== */
+.count { font-size: 2.4rem; font-weight: 800; color: #134e2a; }
+
+/* ===== Footer ===== */
+.bottom-strip { height: 8px; background: #6b4f2a; margin-top: 28px; }
+.site-footer {
+  text-align: center;
+  padding: 12px;
+  background: #0b3d2e;
+  color: #fdf6e3;
+}

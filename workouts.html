@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  
+  <title>Workout Generator • GreenBite</title>
+
+  <!-- Main site CSS (your navbar, buttons, etc.) -->
+  <link rel="stylesheet" href="style.css" />
+  <!-- Page CSS -->
+  <link rel="stylesheet" href="workouts.css" />
+</head>
+<body>
+  <!-- ===== Nav (reuse your site nav) ===== -->
+  <header>
+    <nav class="navbar">
+      <a class="logo" href="Index.html">GreenBite</a>
+      <button id="menuBtn" aria-label="Menu" aria-expanded="false" aria-controls="mainNav">☰</button>
+      <ul id="mainNav" class="nav-links">
+        <li><a href="Index.html">Home</a></li>
+        <li><a href="recipe.html">Healthy Recipes</a></li>
+        <li><a href="calculator.html">Calorie Calculator</a></li>
+        <li><a href="workouts.html">Workouts</a></li>
+        <li><a href="mindfulness.html">Mindfulness</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- ===== Page banner ===== -->
+  <section class="page-banner">
+    <h1>Workout Generator</h1>
+  </section>
+
+  <!-- ===== 4 simple control cards ===== -->
+  <section class="cards">
+    <div class="card">
+      <img src="images/23.jpg" alt="Body part">
+      <h3>Body Part</h3>
+      <select id="bodyPart" aria-label="Choose body part">
+        <option value="full">Full Body</option>
+        <option value="arms">Arms</option>
+        <option value="legs">Legs</option>
+        <option value="core">Core</option>
+      </select>
+    </div>
+
+    <div class="card">
+      <img src="images/29.jpg" alt="Equipment">
+      <h3>Equipment</h3>
+      <select id="equipment" aria-label="Choose equipment">
+        <option value="any">Any</option>
+        <option value="none">None</option>
+        <option value="dumbbells">Dumbbells</option>
+        <option value="band">Resistance Band</option>
+      </select>
+    </div>
+
+    <div class="card">
+      <img src="images/30.jpg" alt="How many exercises">
+      <h3>Exercises</h3>
+      <select id="count" aria-label="Number of exercises">
+        <option value="4">4</option>
+        <option value="5" selected>5</option>
+        <option value="6">6</option>
+      </select>
+    </div>
+
+    <div class="card">
+      <img src="images/31.jpg" alt="Seconds per exercise">
+      <h3>Seconds per exercise</h3>
+      <select id="duration" aria-label="Seconds per exercise">
+        <option value="20">20</option>
+        <option value="30" selected>30</option>
+        <option value="45">45</option>
+      </select>
+    </div>
+  </section>
+
+  <!-- ===== Actions ===== -->
+  <section class="actions">
+    <button id="btnGenerate">Generate Plan</button>
+    <button id="btnStart" disabled>Start Routine</button>
+    <button id="btnPause" disabled>Pause</button>
+    <button id="btnNext" disabled>Next</button>
+    <button id="btnReset">Reset</button>
+  </section>
+
+  <!-- ===== Plan + Timer ===== -->
+  <section class="plan-timer">
+    <div class="plan">
+      <h2>Your Plan</h2>
+      <ol id="planList"></ol>
+    </div>
+    <div class="timer">
+      <h2>Timer</h2>
+      <p id="currentExercise">No exercise</p>
+      <div id="countdown">0</div>
+      <p id="timerInfo"></p>
+    </div>
+  </section>
+
+  <!-- your site JS (menu etc.) -->
+  <script src="script.js"></script>
+  <!-- workout logic -->
+  <script src="workouts.js"></script>
+
+  <!-- Simple footer line -->
+  <footer class="footer">
+    <p>&copy; 2025 GreenBite • Eat healthy, stay active.</p>
+  </footer>
+</body>
+</html>
